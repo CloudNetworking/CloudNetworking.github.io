@@ -3,18 +3,18 @@
 <head>
     <meta charset="utf-8">
     
-    <title>Hexo</title>
+    <title>CloudNetworking</title>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
+<meta property="og:title" content="CloudNetworking">
 <meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="CloudNetworking">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="CloudNetworking">
     
 
     
-        <link rel="alternate" href="/" title="Hexo" type="application/atom+xml" />
+        <link rel="alternate" href="/" title="CloudNetworking" type="application/atom+xml" />
     
 
     
@@ -47,7 +47,7 @@
         <div class="outer">
             <a href="/" id="logo">
                 <i class="logo"></i>
-                <span class="site-title">Hexo</span>
+                <span class="site-title">CloudNetworking</span>
             </a>
             <nav id="main-nav">
                 
@@ -143,6 +143,7 @@
                 
 
 <aside id="profile">
+
     <div class="inner profile-inner">
         <div class="base-info profile-block">
             <img id="avatar" src="/css/images/avatar.png" />
@@ -153,7 +154,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                1
+                2
                 <span>文章</span>
             </div>
             <div class="article-info-block">
@@ -200,12 +201,209 @@
                 </tr>
             </table>
         </div>
+		
+		
         
+		
+		
+		
     </div>
+	
 </aside>
 
             
             <section id="main">
+    <article id="struts2-Struts2" class="article article-type-struts2" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+            <header class="article-header">
+                
+    
+        <h1 itemprop="name">
+            <a class="article-title" href="/2017/02/08/Struts2/">Struts2</a>
+        </h1>
+    
+
+                
+                    <div class="article-meta">
+                        
+    <div class="article-date">
+        <i class="fa fa-calendar"></i>
+        <a href="/2017/02/08/Struts2/">
+            <time datetime="2017-02-08T02:16:00.000Z" itemprop="datePublished">2017-02-08</time>
+        </a>
+    </div>
+
+
+                        
+                        
+                    </div>
+                
+            </header>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            
+            <p>#测试页面</p>
+<pre><code>package com.qf.annotation4;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
+public class Test {
+
+@DataBaseType(type=&quot;sqlserver&quot;)
+public  void  getDBConn() throws Exception{
+
+    Class clazz= Test.class;
+    Method method = clazz.
+            getDeclaredMethod(&quot;getDBConn&quot;, null);
+    //得到当前方法的注解
+    Annotation annotation[] = method.getDeclaredAnnotations();
+    //System.out.println(annotation.length);
+    for (Annotation annotation2 : annotation) {
+        if (annotation2 instanceof DataBaseType ) {
+            //向下转型--》强制转化
+            DataBaseType dataBaseType = (DataBaseType)annotation2;
+            if (&quot;oracle&quot;.equalsIgnoreCase(dataBaseType.type())) {
+                System.out.println(&quot;链接oracle&quot;);
+                //链接oracle数据库的逻辑
+            }else if (&quot;mysql&quot;.equalsIgnoreCase(dataBaseType.type())) {
+                System.out.println(&quot;链接mySql数据库&quot;);
+            }else if (&quot;sqlserver&quot;.equalsIgnoreCase(dataBaseType.type())) {
+                System.out.println(&quot;链接sqlServer数据库&quot;);
+            }
+        }        
+    }
+}
+   public static void main(String[] args) throws Exception {
+       new Test().getDBConn();
+   }
+}
+
+package com.qf.annotation4;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
+public class Test {
+
+@DataBaseType(type=&quot;sqlserver&quot;)
+public  void  getDBConn() throws Exception{
+
+    Class clazz= Test.class;
+    Method method = clazz.
+            getDeclaredMethod(&quot;getDBConn&quot;, null);
+    //得到当前方法的注解
+    Annotation annotation[] = method.getDeclaredAnnotations();
+    //System.out.println(annotation.length);
+    for (Annotation annotation2 : annotation) {
+        if (annotation2 instanceof DataBaseType ) {
+            //向下转型--》强制转化
+            DataBaseType dataBaseType = (DataBaseType)annotation2;
+            if (&quot;oracle&quot;.equalsIgnoreCase(dataBaseType.type())) {
+                System.out.println(&quot;链接oracle&quot;);
+                //链接oracle数据库的逻辑
+            }else if (&quot;mysql&quot;.equalsIgnoreCase(dataBaseType.type())) {
+                System.out.println(&quot;链接mySql数据库&quot;);
+            }else if (&quot;sqlserver&quot;.equalsIgnoreCase(dataBaseType.type())) {
+                System.out.println(&quot;链接sqlServer数据库&quot;);
+            }
+        }        
+    }
+}
+   public static void main(String[] args) throws Exception {
+   new Test().getDBConn();
+   }
+}
+</code></pre>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://yoursite.com/2017/02/08/Struts2/" data-id="ciywj2v1w0001dot9jt6tm65s" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://yoursite.com/2017/02/08/Struts2/#comments" class="article-comment-link disqus-comment-count" data-disqus-url="http://yoursite.com/2017/02/08/Struts2/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -240,7 +438,8 @@
         
             
             <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post</span></div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> com.qf.dao;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.sql.Connection;</div><div class="line"><span class="keyword">import</span> java.sql.DriverManager;</div><div class="line"><span class="keyword">import</span> java.sql.PreparedStatement;</div><div class="line"><span class="keyword">import</span> java.sql.ResultSet;</div><div class="line"><span class="keyword">import</span> java.sql.SQLException;</div><div class="line"><span class="keyword">import</span> java.sql.Statement;</div><div class="line"></div><div class="line"><span class="keyword">import</span> javax.enterprise.inject.New;</div><div class="line"></div><div class="line"><span class="keyword">import</span> com.qf.utils.ConfigManager;</div><div class="line"></div><div class="line"><span class="comment">/**</span></div><div class="line"> * dao:data access object:数据访问对象</div><div class="line"> * 增删改通用</div><div class="line"> * 查询通用： select  *  from users,select uname from users where id=?;</div><div class="line"> * <span class="doctag">@author</span> liliting</div><div class="line"> * 基本的操作数据库的工具类</div><div class="line"> */</div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseDao</span> </span>&#123;</div><div class="line">	Connection conn =<span class="keyword">null</span>;</div><div class="line">	PreparedStatement ps = <span class="keyword">null</span>;</div><div class="line">	ResultSet rSet =<span class="keyword">null</span>;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> Connection <span class="title">getConnection</span><span class="params">()</span></span>&#123;</div><div class="line">		String diver=ConfigManager.getInstance().getValue(<span class="string">"jdbc_driver_class"</span>);</div><div class="line">		String url=ConfigManager.getInstance().getValue(<span class="string">"connection_url"</span>);</div><div class="line">		String user=ConfigManager.getInstance().getValue(<span class="string">"connection_user"</span>);</div><div class="line">		String password=ConfigManager.getInstance().getValue(<span class="string">"connection_password"</span>);</div><div class="line"></div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			Class.forName(diver);</div><div class="line">			conn = DriverManager.getConnection(url, user, password);</div><div class="line">			<span class="keyword">return</span> conn;</div><div class="line">		&#125; <span class="keyword">catch</span> (ClassNotFoundException e) &#123;</div><div class="line">			<span class="comment">// TODO Auto-generated catch block</span></div><div class="line">			e.printStackTrace();</div><div class="line">		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</div><div class="line">			<span class="comment">// TODO Auto-generated catch block</span></div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> conn;</div><div class="line">		</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//查询通用的方法</span></div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * select * from users;</div><div class="line">	 * select * from users where id=? and username=?;   </div><div class="line">	 *       ps.setInt(1,1001);//填充第一个占位符</div><div class="line">	 * 		 ps.setString(2,"张三");</div><div class="line">	 * select count(*) from users;</div><div class="line">	 * sql语句带占位符</div><div class="line">	 * Object[]params:填充第一个sql语句中带有的占位符</div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="comment">//select * from users where username=? and password=? ;  new Object[]&#123;"admin","admin"&#125;</span></div><div class="line">	<span class="function"><span class="keyword">public</span> ResultSet <span class="title">executeQuery</span><span class="params">(String sql,Object[]params)</span></span>&#123;</div><div class="line">		conn = getConnection();</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			ps = conn.prepareStatement(sql);</div><div class="line">			<span class="comment">//填充占位符</span></div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; params.length; i++) &#123;</div><div class="line">				ps.setObject(i+<span class="number">1</span>, params[i]);</div><div class="line">				<span class="comment">//ps.setObject(1,"admin");</span></div><div class="line">				<span class="comment">//ps.setObject(2,"admin");</span></div><div class="line">			&#125;</div><div class="line">			<span class="keyword">return</span> ps.executeQuery();</div><div class="line">		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</div><div class="line">			<span class="comment">// TODO Auto-generated catch block</span></div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;<span class="keyword">finally</span> &#123;</div><div class="line">			<span class="comment">//closeAll();  查询通用方法 不能再次关闭</span></div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> rSet;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">/**</span></div><div class="line">	 * insert into users values(?,?,?,?);   new Object[]&#123;4,"jinsanpang","jbgsn",18&#125;;</div><div class="line">	 * <span class="doctag">@param</span> sql</div><div class="line">	 * <span class="doctag">@param</span> params</div><div class="line">	 * <span class="doctag">@return</span></div><div class="line">	 */</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">executeUpdate</span><span class="params">(String sql,Object []params)</span></span>&#123;</div><div class="line">		conn = getConnection();</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			ps= conn.prepareStatement(sql);</div><div class="line">			<span class="comment">//根据第二个参数填充第一个参数的占位符</span></div><div class="line">			<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; params.length; i++) &#123;</div><div class="line">				ps.setObject(i+<span class="number">1</span>, params[i]);</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">return</span> ps.executeUpdate();<span class="comment">//返回sql语句影响的行数</span></div><div class="line">		&#125; <span class="keyword">catch</span> (SQLException e) &#123;</div><div class="line">			<span class="comment">// TODO Auto-generated catch block</span></div><div class="line">			e.printStackTrace();</div><div class="line">		&#125;<span class="keyword">finally</span> &#123;</div><div class="line">			closeAll();</div><div class="line">		&#125;</div><div class="line">		</div><div class="line">		<span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">		</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//关闭资源</span></div><div class="line">	<span class="function"><span class="keyword">public</span>  <span class="keyword">void</span> <span class="title">closeAll</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">if</span> (rSet!=<span class="keyword">null</span>) &#123;</div><div class="line">			<span class="keyword">try</span> &#123;</div><div class="line">				rSet.close();</div><div class="line">			&#125; <span class="keyword">catch</span> (SQLException e) &#123;</div><div class="line">				<span class="comment">// TODO Auto-generated catch block</span></div><div class="line">				e.printStackTrace();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (ps!=<span class="keyword">null</span>) &#123;</div><div class="line">			<span class="keyword">try</span> &#123;</div><div class="line">				ps.close();</div><div class="line">			&#125; <span class="keyword">catch</span> (SQLException e) &#123;</div><div class="line">				<span class="comment">// TODO Auto-generated catch block</span></div><div class="line">				e.printStackTrace();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (conn!=<span class="keyword">null</span>) &#123;</div><div class="line">			<span class="keyword">try</span> &#123;</div><div class="line">				conn.close();</div><div class="line">			&#125; <span class="keyword">catch</span> (SQLException e) &#123;</div><div class="line">				<span class="comment">// TODO Auto-generated catch block</span></div><div class="line">				e.printStackTrace();</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> SQLException </span>&#123;</div><div class="line">		BaseDao dao=<span class="keyword">new</span> BaseDao();</div><div class="line">		System.out.println(dao.getConnection());</div><div class="line">		<span class="comment">//select  * from users</span></div><div class="line"><span class="comment">//	  ResultSet rSet=	dao.executeQuery("select  * from users", new Object[]&#123;&#125;);</span></div><div class="line"><span class="comment">//	  while(rSet.next())&#123;</span></div><div class="line"><span class="comment">//		  System.out.println(rSet.getString(2));</span></div><div class="line"><span class="comment">//	  &#125;rSet.close();</span></div><div class="line"><span class="comment">//	  System.out.println("-----------");</span></div><div class="line"><span class="comment">//	  ResultSet rSet1=	dao.executeQuery("select  * from test where id=?", new Object[]&#123;1&#125;);</span></div><div class="line"><span class="comment">//	  while(rSet1.next())&#123;</span></div><div class="line"><span class="comment">//		  System.out.println(rSet1.getString(2));</span></div><div class="line"><span class="comment">//	  &#125;</span></div><div class="line"><span class="comment">//		</span></div><div class="line"><span class="comment">//	  System.out.println("------------------");</span></div><div class="line"><span class="comment">//	  </span></div><div class="line"><span class="comment">//	  ResultSet rSet2=	dao.executeQuery("select  count(*) from users", new Object[]&#123;&#125;);</span></div><div class="line"><span class="comment">//	  while(rSet2.next())&#123;</span></div><div class="line"><span class="comment">//		  System.out.println(rSet2.getInt(1));</span></div><div class="line"><span class="comment">//	  &#125;</span></div><div class="line"><span class="comment">//	  </span></div><div class="line"><span class="comment">//	  System.out.println("****************");</span></div><div class="line"><span class="comment">//	  String  sql = "insert into users values(?,?,?,?)";</span></div><div class="line"><span class="comment">//	  Object params[]=&#123;4,"zhangsan","zhangsan",18&#125;;</span></div><div class="line"><span class="comment">//	   if(dao.executeUpdate(sql, params)&gt;0)&#123;</span></div><div class="line"><span class="comment">//		   System.out.println("插入成功");</span></div><div class="line"><span class="comment">//	   &#125;</span></div><div class="line"><span class="comment">//	   System.out.println("********修改********");</span></div><div class="line"><span class="comment">//		    sql = "update  users set username=? where id=?";</span></div><div class="line"><span class="comment">//		    params=new Object[]&#123;"lisi",3&#125;;</span></div><div class="line"><span class="comment">//		   if(dao.executeUpdate(sql, params)&gt;0)&#123;</span></div><div class="line"><span class="comment">//			   System.out.println("修改成功");</span></div><div class="line"><span class="comment">//		   &#125;</span></div><div class="line"><span class="comment">//	  </span></div><div class="line"><span class="comment">//	  </span></div><div class="line">	  </div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
 <p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
@@ -258,7 +457,7 @@
 
 </div>
 
-    <a data-url="http://yoursite.com/2017/02/07/hello-world/" data-id="ciyvqv2et0000ist9rqo8amaf" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://yoursite.com/2017/02/07/hello-world/" data-id="ciywj2v1p0000dot90pmua803" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -348,6 +547,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2017/02/08/Struts2/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/02/08/Struts2/" class="title">Struts2</a></p>
+                            <p class="item-date"><time datetime="2017-02-08T02:16:00.000Z" itemprop="datePublished">2017-02-08</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2017/02/07/hello-world/" class="thumbnail">
     
     
@@ -375,7 +593,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">1</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
