@@ -28,7 +28,7 @@ public class Test {
 @DataBaseType(type=&amp;quot;sqlserver&amp;quot;)
 public  void  getDBConn() thr">
 <meta property="og:image" content="https://example.com/image.jpg">
-<meta property="og:updated_time" content="2017-02-08T17:34:19.331Z">
+<meta property="og:updated_time" content="2017-02-08T17:36:18.076Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Struts2">
 <meta name="twitter:description" content="#测试页面
@@ -291,7 +291,8 @@ public  void  getDBConn() throws Exception{
     //得到当前方法的注解
     Annotation annotation[] = method.getDeclaredAnnotations();
     //System.out.println(annotation.length);
-    for (Annotation annotation2 : annotation) {
+</code></pre><a id="more"></a>
+<pre><code>    for (Annotation annotation2 : annotation) {
         if (annotation2 instanceof DataBaseType ) {
             //向下转型--》强制转化
             DataBaseType dataBaseType = (DataBaseType)annotation2;
@@ -306,8 +307,8 @@ public  void  getDBConn() throws Exception{
         }        
     }
 }
-</code></pre><a id="more"></a>
-<pre><code>   public static void main(String[] args) throws Exception {
+
+   public static void main(String[] args) throws Exception {
        new Test().getDBConn();
    }
 }
