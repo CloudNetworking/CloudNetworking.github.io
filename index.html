@@ -154,7 +154,7 @@
         </div>
         <div class="article-info profile-block">
             <div class="article-info-block">
-                5
+                6
                 <span>文章</span>
             </div>
             <div class="article-info-block">
@@ -214,6 +214,111 @@
 
             
             <section id="main">
+    <article id="post-Struts2/分享Struts2电子书" class="article article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+        
+            <p><hr>
+<p>title: 分享一本学习Struts2的书籍<br>thumbnail: <a href="https://github.com/CloudNetworking/CloudNetworking.github.io/blob/master/image/216.big.jpg?raw=true">https://github.com/CloudNetworking/CloudNetworking.github.io/blob/master/image/216.big.jpg?raw=true</a><br>date: 2017/2/10 0:01:20<br>categories: </p>
+<ul>
+<li>Struts2</li>
+<li>电子书<br>tags: “电子书” #文章标签 可以省略</li>
+</ul>
+<hr>
+<h2 id="Struts-2-in-Action"><a href="#Struts-2-in-Action" class="headerlink" title="　Struts 2 in Action"></a>　Struts 2 in Action</h2><h2 id="Struts-2-实战"><a href="#Struts-2-实战" class="headerlink" title="　　　　Struts 2 实战"></a>　　　　Struts 2 实战</h2><h4 id="本书结合实例介绍了-Struts-2框架，主要内容包括-Action、Result、Interceptor等框架组件，基于注解的配置选项等新特征，Struts-2插件-FreeMarker，如何从-Struts-1和-WebWork-2迁移到-Struts-2，Ajax标签、-Spring框架集成等新特性。"><a href="#本书结合实例介绍了-Struts-2框架，主要内容包括-Action、Result、Interceptor等框架组件，基于注解的配置选项等新特征，Struts-2插件-FreeMarker，如何从-Struts-1和-WebWork-2迁移到-Struts-2，Ajax标签、-Spring框架集成等新特性。" class="headerlink" title="　　本书结合实例介绍了 Struts 2框架，主要内容包括 Action、Result、Interceptor等框架组件，基于注解的配置选项等新特征，Struts 2插件 FreeMarker，如何从 Struts 1和 WebWork 2迁移到 Struts 2，Ajax标签、 Spring框架集成等新特性。"></a>　　本书结合实例介绍了 Struts 2框架，主要内容包括 Action、Result、Interceptor等框架组件，基于注解的配置选项等新特征，Struts 2插件 FreeMarker，如何从 Struts 1和 WebWork 2迁移到 Struts 2，Ajax标签、 Spring框架集成等新特性。</h4><p>####　　本书适合各层次 Java开发人员阅读和参考。<br><img src="https://github.com/CloudNetworking/CloudNetworking.github.io/blob/master/image/216.big.jpg?raw=true" alt=""></p></p>
+            <p class="article-more-link">
+                <a href="/2017/02/10/Struts2/分享Struts2电子书/#more">查看更多</a>
+            </p>
+        
+        </div>
+        <footer class="article-footer">
+            <div class="share-container">
+
+
+
+</div>
+
+    <a data-url="http://CloudNetworking.cc/2017/02/10/Struts2/分享Struts2电子书/" data-id="ciyyl7urj000auct9sp5kzx5z" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        // Prevent duplicate binding
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="fa fa-facebook article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+            
+    
+        <a href="http://CloudNetworking.cc/2017/02/10/Struts2/分享Struts2电子书/#comments" class="article-comment-link ds-thread-count" data-thread-key="http://CloudNetworking.cc/2017/02/10/Struts2/分享Struts2电子书/">评论</a>
+    
+
+        </footer>
+    </div>
+    
+</article>
+
+
+
     <article id="post-Struts2/Struts2入门/创建一个Struts2应用的详细步骤" class="article article-type-post" itemscope itemprop="blogPost">
     <div class="article-inner">
         
@@ -270,7 +375,7 @@
 
 </div>
 
-    <a data-url="http://CloudNetworking.cc/2017/02/09/Struts2/Struts2入门/创建一个Struts2应用的详细步骤/" data-id="ciyyk7ce0000gl0t9y8sk6hdl" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://CloudNetworking.cc/2017/02/09/Struts2/Struts2入门/创建一个Struts2应用的详细步骤/" data-id="ciyyl7ut1000iuct9uwz9hg2p" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -403,7 +508,7 @@
 
 </div>
 
-    <a data-url="http://CloudNetworking.cc/2017/02/09/Struts2/访问Action/Action的动态方法调用/" data-id="ciyyk7ce4000hl0t9ezy98jar" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://CloudNetworking.cc/2017/02/09/Struts2/访问Action/Action的动态方法调用/" data-id="ciyyl7usz000huct9mnncr7ql" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -536,7 +641,7 @@
 
 </div>
 
-    <a data-url="http://CloudNetworking.cc/2017/02/07/hello-world/" data-id="ciyyk7ca70000l0t9qfk4qvii" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://CloudNetworking.cc/2017/02/07/hello-world/" data-id="ciyyl7uov0000uct9qrpwnt0i" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -660,7 +765,7 @@
 
 </div>
 
-    <a data-url="http://CloudNetworking.cc/2013/07/13/hello/" data-id="ciyyk7caf0002l0t9ugshc1w1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://CloudNetworking.cc/2013/07/13/hello/" data-id="ciyyl7up40002uct9bylpvxin" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -794,7 +899,7 @@
 
 </div>
 
-    <a data-url="http://CloudNetworking.cc/2013/07/13/Struts2/struts/" data-id="ciyyk7cco0009l0t9zjjvdhrh" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://CloudNetworking.cc/2013/07/13/Struts2/struts/" data-id="ciyyl7urg0009uct9lgb8ljev" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
@@ -884,6 +989,25 @@
                     <li>
                         
                         <div class="item-thumbnail">
+                            <a href="/2017/02/10/Struts2/分享Struts2电子书/" class="thumbnail">
+    
+    
+        <span class="thumbnail-image thumbnail-none"></span>
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2017/02/10/Struts2/分享Struts2电子书/" class="title"></a></p>
+                            <p class="item-date"><time datetime="2017-02-09T16:16:47.954Z" itemprop="datePublished">2017-02-10</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
                             <a href="/2017/02/09/Struts2/Struts2入门/创建一个Struts2应用的详细步骤/" class="thumbnail">
     
     
@@ -957,25 +1081,6 @@
                         </div>
                     </li>
                 
-                    <li>
-                        
-                        <div class="item-thumbnail">
-                            <a href="/2013/07/13/Struts2/struts/" class="thumbnail">
-    
-    
-        <span class="thumbnail-image thumbnail-none"></span>
-    
-</a>
-
-                        </div>
-                        
-                        <div class="item-inner">
-                            <p class="item-category"><a class="article-category-link" href="/categories/前端/">前端</a><i class="fa fa-angle-right"></i><a class="article-category-link" href="/categories/前端/Hexo/">Hexo</a></p>
-                            <p class="item-title"><a href="/2013/07/13/Struts2/struts/" class="title">truts</a></p>
-                            <p class="item-date"><time datetime="2013-07-13T12:46:25.000Z" itemprop="datePublished">2013-07-13</time></p>
-                        </div>
-                    </li>
-                
             </ul>
         </div>
     </div>
@@ -994,7 +1099,7 @@
     <div class="widget-wrap">
         <h3 class="widget-title">归档</h3>
         <div class="widget">
-            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">七月 2013</a><span class="archive-list-count">2</span></li></ul>
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/02/">二月 2017</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">七月 2013</a><span class="archive-list-count">2</span></li></ul>
         </div>
     </div>
 
