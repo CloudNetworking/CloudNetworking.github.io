@@ -22,7 +22,7 @@ Struts2 是一个非常优秀的MVC框架，基于Model2 设计模型，由传�
 <meta property="og:image" content="https://github.com/CloudNetworking/CloudNetworking.github.io/blob/master/image/500px-MVC-Process.svg.png?raw=true">
 <meta property="og:image" content="https://github.com/CloudNetworking/CloudNetworking.github.io/blob/master/image/Struts2%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B1.png?raw=true">
 <meta property="og:image" content="https://github.com/CloudNetworking/CloudNetworking.github.io/blob/master/image/Struts2%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B2.png?raw=true">
-<meta property="og:updated_time" content="2017-02-10T08:43:47.005Z">
+<meta property="og:updated_time" content="2017-02-10T08:53:22.141Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Struts2入门">
 <meta name="twitter:description" content="Struts2简介Apache Struts 2是一个用于开发Java EE网络应用程序的开源Web应用框架。它利用并扩展了Java Servlet API
@@ -291,18 +291,10 @@ Struts2 是一个非常优秀的MVC框架，基于Model2 设计模型，由传�
 <font size="4">Strust2 核心功能<br><br>- 允许POJO（Plain Old Java Objects）对象 作为Action<br>- Action的execute 方法不再与Servlet API耦合，更易测试<br>- 支持更多视图技术（JSP、FreeMarker、Velocity）<br>- 基于Spring AOP思想的拦截器机制，更易扩展<br>- 更强大、更易用输入校验功能<br><br></font>
 
 <hr>
-<h3 id="基本的MVC架构"><a href="#基本的MVC架构" class="headerlink" title="基本的MVC架构"></a>基本的MVC架构</h3><font size="4">模型-视图-控制器或通常被称为 MVC，是一种用于开发 web 应用程序的软件设计模式。模型-视图-控制器模式由以下三个部分组成：<br><br><br>- Model - 模式的最低层，负责维护数据。<br><br><br>- View - 负责显示全部或部分的数据给用户。<br><br><br>- Controller - 控制模型和视图之间的交互的软件代码。<br><br></font><br><font size="4">MVC 是受欢迎的，是因为它把应用逻辑从用户接口层中分离，而且支持关注点的分离。在这里，控制器接收应用程序的所有请求，然后与模型一起工作准备好视图需要的任何数据。然后视图使用控制器准备好的数据来生成最终正式的响应。MVC 抽象可以用图形表示，如下所示。<br><img src="https://github.com/CloudNetworking/CloudNetworking.github.io/blob/master/image/500px-MVC-Process.svg.png?raw=true" alt=""><br><br><font size="5">模型</font>
+<h3 id="基本的MVC架构"><a href="#基本的MVC架构" class="headerlink" title="基本的MVC架构"></a>基本的MVC架构</h3><font size="4">模型-视图-控制器或通常被称为 MVC，是一种用于开发 web 应用程序的软件设计模式。模型-视图-控制器模式由以下三个部分组成：<br><br><br>- Model - 模式的最低层，负责维护数据。<br><br><br>- View - 负责显示全部或部分的数据给用户。<br><br><br>- Controller - 控制模型和视图之间的交互的软件代码。<br><br></font><br><font size="4">MVC 是受欢迎的，是因为它把应用逻辑从用户接口层中分离，而且支持关注点的分离。在这里，控制器接收应用程序的所有请求，然后与模型一起工作准备好视图需要的任何数据。然后视图使用控制器准备好的数据来生成最终正式的响应。MVC 抽象可以用图形表示，如下所示。</font>
 
-
-<font size="4">模型负责管理应用程序的数据。它响应来自视图的请求，而且它也响应来自控制器的指令进行更新自身。</font>
-
-<font size="5">视图</font>
-
-<font size="4">在一个特定格式中数据的展示由一个控制器的决定引发来呈现该数据。它们是基于模板系统的脚本，如 JSP，ASP，PHP，而且它们很容易与 AJAX 技术进行集成。</font>
-
-<font size="5">控制器</font>
-
-<font size="4">控制器负责响应用户的输入和执行数据模型对象的交互。控制器接收输入，验证输入，然后执行修改数据模型状态的业务操作。</font>
+<p><img src="https://github.com/CloudNetworking/CloudNetworking.github.io/blob/master/image/500px-MVC-Process.svg.png?raw=true" alt=""></p>
+<font size="5">模型</font><br><br><br><font size="4">模型负责管理应用程序的数据。它响应来自视图的请求，而且它也响应来自控制器的指令进行更新自身。</font><br><br><br><font size="5">视图</font><br><br><br><font size="4">在一个特定格式中数据的展示由一个控制器的决定引发来呈现该数据。它们是基于模板系统的脚本，如 JSP，ASP，PHP，而且它们很容易与 AJAX 技术进行集成。</font><br><br><br><font size="5">控制器</font><br><br><br><font size="4">控制器负责响应用户的输入和执行数据模型对象的交互。控制器接收输入，验证输入，然后执行修改数据模型状态的业务操作。</font>
 
 
 <hr>
@@ -332,7 +324,7 @@ Struts2 是一个非常优秀的MVC框架，基于Model2 设计模型，由传�
 </ol>
 <hr>
 <h3 id="Struts2应用的执行流程"><a href="#Struts2应用的执行流程" class="headerlink" title="Struts2应用的执行流程"></a>Struts2应用的执行流程</h3><p><img src="https://github.com/CloudNetworking/CloudNetworking.github.io/blob/master/image/Struts2%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B1.png?raw=true" alt=""><br><img src="https://github.com/CloudNetworking/CloudNetworking.github.io/blob/master/image/Struts2%E6%89%A7%E8%A1%8C%E6%B5%81%E7%A8%8B2.png?raw=true" alt=""></p>
-</font>
+
         
         </div>
         <footer class="article-footer">
@@ -342,7 +334,7 @@ Struts2 是一个非常优秀的MVC框架，基于Model2 设计模型，由传�
 
 </div>
 
-    <a data-url="http://CloudNetworking.cc/2017/02/10/Struts2/Struts2入门/Struts2入门/" data-id="ciyzk1loh000r74t9vv8qf2v1" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+    <a data-url="http://CloudNetworking.cc/2017/02/10/Struts2/Struts2入门/Struts2入门/" data-id="ciyzkluv4000ri8t9m93mz6gz" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
 <script>
     (function ($) {
         // Prevent duplicate binding
